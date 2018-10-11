@@ -5,6 +5,10 @@ function resolve(dir) {
 }
 
 module.exports = {
+    css: {
+        sourceMap: false
+    },
+    productionSourceMap:false,
     devServer: {
         port: 8085,
         host: 'localhost',

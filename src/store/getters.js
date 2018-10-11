@@ -1,0 +1,1 @@
+export const direction = state => state.direction
