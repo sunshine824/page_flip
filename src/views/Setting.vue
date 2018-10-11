@@ -1,7 +1,7 @@
 <template>
-    <div class="about">
+    <div class="setting">
         <div class="link">
-            <router-link to="/page02">跳转到Page02</router-link>
+            <router-link to="/">跳转到首页</router-link>
         </div>
         <ul class="bottom">
             <li>
@@ -19,10 +19,10 @@
 
 
 <style lang="less">
-    .about{
+    .setting{
         width: 100%;
         height: calc(100vh);
-        background: #c4e1ff;
+        background: #47be97;
         .link{
             text-align: center;
             padding-top: 5rem;
