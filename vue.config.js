@@ -10,7 +10,7 @@ module.exports = {
         host: 'localhost',
         proxy: {
             '/api': {
-                target: '',
+                target: 'http://218.6.173.219:8083',
                 wx: true,
                 changeOrigin: true
             }
