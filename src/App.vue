@@ -41,7 +41,7 @@
         top: 0;
         position: absolute;
         backface-visibility: hidden;
-        perspective: 1000;
+        perspective: 500px;
     }
 
     .vux-pop-out-enter {
