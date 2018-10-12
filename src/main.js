@@ -11,7 +11,6 @@ Vue.prototype.$http = axios
 const history = window.sessionStorage
 let count = history.getItem('count') || 0;
 history.clear()
-history.setItem('/', 0)
 
 router.beforeEach((to, from, next) => {
     const subArr = ['/', '/about', '/setting']

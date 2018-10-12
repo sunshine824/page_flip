@@ -1,5 +1,6 @@
 const state = {
-    direction: 'next'
+    direction: 'next',
+    logo:''
 }
 
 export default state

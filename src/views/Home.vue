@@ -19,18 +19,17 @@
 
 <script>
     // @ is an alias to /src
-    import {getLogo} from '@/libs/js/api'
+    import {mapActions} from 'vuex'
 
     export default {
         name: 'home',
         created() {
-            this._getLogo()
+            this.get_logo()
         },
         methods: {
-            _getLogo: async function () {
-                let result = await getLogo()
-                console.log(result)
-            }
+            ...mapActions([
+                'get_logo'
+            ])
         }
     }
 </script>
