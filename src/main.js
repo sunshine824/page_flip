@@ -14,14 +14,22 @@ history.clear()
 history.setItem('/', 0)
 
 router.beforeEach((to, from, next) => {
-    let toIndex = history.getItem(to.path)
-    let prevIndex = history.getItem(from.path)
+    const subArr = ['/', '/about', '/setting']
+    let [toIndex, prevIndex] = [parseInt(history.getItem(to.path)), parseInt(history.getItem(from.path))]
+    for (let index in subArr) history.setItem(subArr[index], 0)
 
-    if (toIndex) {
-
-    } else {
+    if (toIndex || toIndex === 0) {
+        if (toIndex > prevIndex) {
+            store.dispatch('set_direction_state', 'next')
+        } else if (toIndex === prevIndex) {
+            store.dispatch('set_direction_state', '')
+        } else {
+            store.dispatch('set_direction_state', 'prev')
+        }
+    } else if (!subArr.includes(to.path)) {
         ++count;
         history.setItem(to.path, count)
+        store.dispatch('set_direction_state', 'next')
     }
     next();
 })

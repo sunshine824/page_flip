@@ -2,6 +2,7 @@
     <div class="setting">
         <div class="link">
             <router-link to="/">跳转到首页</router-link>
+            <router-link to="/page01">跳转到Page01</router-link>
         </div>
         <ul class="bottom">
             <li>
@@ -27,6 +28,11 @@
             text-align: center;
             padding-top: 5rem;
             font-size: .45rem;
+            a{
+                color: #fff;
+                display: block;
+                margin-top: .2rem;
+            }
         }
         .bottom{
             position: fixed;

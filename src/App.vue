@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <transition :name="'vux-pop-'+(direction==='next' ? 'in' : 'out')">
+        <transition :name="'vux-pop-'+(direction==='next' ? 'in' : direction==='prev' ? 'out' : '')">
             <router-view/>
         </transition>
     </div>
@@ -18,11 +18,6 @@
             ...mapGetters([
                 'direction'
             ])
-        },
-        watch: {
-            '$route'(to, from) {
-                console.log(this.direction)
-            }
         }
     }
 </script>
