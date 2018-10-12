@@ -19,12 +19,17 @@
 
 <script>
     // @ is an alias to /src
-    import {mapActions} from 'vuex'
+    import {mapActions,mapGetters} from 'vuex'
 
     export default {
         name: 'home',
         created() {
             this.get_logo()
+        },
+        computed:{
+            ...mapGetters([
+                'logo'
+            ])
         },
         methods: {
             ...mapActions([
